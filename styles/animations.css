@@ -9,3 +9,132 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+
+.general__button:focus {
+    outline: none;
+    box-shadow: 2px 2px 0 var(--bd-color);
+    transition: box-shadow 0.3s ease;
+}
+
+.general__button {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.general__button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--bd-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.general__button:hover::before {
+    transform: scaleX(1);
+}
+
+.button__text {
+    position: relative;
+    z-index: 1;
+    color: var(--bg-color);
+    mix-blend-mode: difference;
+}
+
+.icon__save {
+    position: relative;
+    z-index: 1;
+    fill: var(--bg-color);
+    mix-blend-mode: difference;
+}
+
+.card__icon-button:focus-visible {
+    outline: 2px solid var(--bd-color);
+    transition: 0.3 ease;
+}
+
+.sparks {
+    opacity: 0;
+}
+
+.contour {
+    transition: fill 0.1s linear;
+}
+
+.core {
+    fill: transparent;
+    transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+}
+
+.card__icon-button:hover .core {
+    fill: var(--heart__hover);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:hover .main__body {
+    fill: var(--heart__hover);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .core {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button:active .main__body {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .contour {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0.06s;
+}
+
+.card__icon-button .like-icon.is-liked .core {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0s;
+}
+
+.card__icon-button .like-icon.is-liked .main__body {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button .like-icon.is-liked .contour {
+    fill: var(--heart__accent);
+    transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+    animation: heart-scale 0.3s ease-in 0.1s 1;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks-fly 0.3s ease-in 0.3s 1;
+}
+
+@keyframes heart-scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes sparks-fly {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

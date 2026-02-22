@@ -1,1 +1,31 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --font-regular: "PressStart2P-Regular", "sans-serif";
+    --font-variation: "Inter-Variable", "sans-serif";
+    --fw-p: 410;
+    --fw-h: 715;
+    --fw-regular: 400;
+    --slant: 0;
+    --bg-color: rgba(255, 255, 255, 1);
+    --bd-color: rgba(0, 0, 0, 1);
+    --text-color: rgba(0, 0, 0, 1);
+    --stroke-color: rgba(255, 255, 255, 1);
+    --button-text-hover: rgba(255, 255, 255, 1);
+    --contour__heart: rgba(0, 0, 0, 1);
+    --heart__sparks: rgba(255, 0, 0, 1);
+    --heart__hover: rgba(0, 0, 0, 1);
+    --heart__accent: rgba(255, 0, 0, 1);
+    --multy-gradient: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+    --multy-block-width: clamp(375px, calc(375px + 325 * ((100vw - 375px) / 1065)), 700px);
+    --header__block-height: clamp(327px, 312.56px + 3.85vw, 370px);
+    --article-images-height: clamp(375px, 256.56px + 30.52vw, 700px);
+    --paragraph-width: clamp(20.0625rem, 12.9102rem + 30.5164vw, 40.375rem);
+    --gap-article: clamp(51px, 49.59px + 0.38vw, 57px);
+    --button-save-width: clamp(306px, 2.723vw + 295.79px, 335px);
+    --button-save-height: clamp(55px, -2.723vw + 94.21px, 84px);
+    --dialog-window: clamp(341px, 336.775px + 1.127vw, 353px);
+    --dialog-button: clamp(261px, 249.732px + 3.005vw, 293px);
+    --disk-icon: clamp(21px, 30.465px - 0.657vw, 28px);
+}
